@@ -18,16 +18,18 @@ const getRound = async () => {
 }
 
 const executeSync = async ()=> {
-  const { minRound, maxRound } = await getRound();
+  const { minRound, maxRound } = getRound();
+
+  console.log(`Wait for second...`);
 
   for(let idx = minRound; idx < maxRound; idx++){
     try {
-      await axios.get('http://localhost:8080/api/lotto'); //로또번호 수집
+      await axios.get('https://localhost/api/lotto'); //로또번호 수집
     } catch (error) {
-      console.log(error.message());
+      
     }
-    await axios.get('http://localhost:8080/api/lotto/calculator'); //로또 알고리즘 계산
-    await axios.get('http://localhost:8080/api/lotto/predict/assign'); //로또 결과 계산 및 유저에게 바인딩
+    await axios.get('https://localhost/api/lotto/calculator'); //로또 알고리즘 계산
+    await axios.get('https://localhost/api/lotto/predict/assign'); //로또 결과 계산 및 유저에게 바인딩
   }
   console.log('Finish Lotto Server Syncronized!');
 }
