@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "cheerio": "^1.0.0-rc.5"
+    "cheerio": "^1.0.0-rc.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "path": "^0.12.7"
   }
 }
