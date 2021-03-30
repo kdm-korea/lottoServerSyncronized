@@ -6,7 +6,8 @@
   "author": "KDM_korea <kdm_korea@naver.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node ./lottoServerSyncronized.js"
+    "develop": "cross-env NODE_ENV=develop node ./src/lottoServerSyncronized.js",
+    "product": "cross-env NODE_ENV=product node ./src/lottoServerSyncronized.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
